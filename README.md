@@ -16,9 +16,6 @@ A hardware implementation of the classic Snake game built entirely in Verilog HD
 * **Score:** `HEX0` + `HEX1` (7-segment displays)
 
 ---
-## Architecture & File Structure ```text . ├── snake.v # Top-level module integrating all submodules and routing I/O ├── collision.v # Core game logic: snake movement, collision detection, score handling ├── VGA_Controller.v # VGA timing generator (640×480 @ 60 Hz) ├── Clks_Generator.v # 50 MHz clock divider and game update clock generator ├── Controller.v # Push-button input controller and direction decoder ├── random_apple.v # LFSR-based pseudo-random apple position generator ├── seg7_decoder.v # BCD to active-low 7-segment display decoder ├── snake.qpf # Intel Quartus Prime project file ├── snake.qsf # FPGA pin assignments and I/O configuration └── README.md # Project documentation ```
-
----
 ## System Architecture & Modules
 
 ### `Clks_Generator.v` (The Timekeeper)
@@ -67,3 +64,16 @@ The largest module running two parallel processes simultaneously:
 **Project Group Members:** Ayna Dua, Rameen Fatima, and Noor ul Harem.
 
 ---
+## Architecture & File Structure
+
+```text
+├── snake.v            – Top-level module routing I/O
+├── collision.v        – Core game logic: snake array, collision math, score
+├── VGA_Controller.v   – 640×480 @ 60 Hz VGA synchronization timing
+├── Clks_Generator.v   – 50 MHz → 25 MHz VGA clock + logic tick generator
+├── Controller.v       – Button-to-direction state machine
+├── random_apple.v     – LFSR pseudo-random apple position module
+├── seg7_decoder.v     – BCD digit to 7-segment display logic (active-low)
+├── snake.qpf          – Quartus project configuration file
+├── snake.qsf          – Physical pin assignments & IO standards
+└── README.md          – Project documentation
