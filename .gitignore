@@ -1,0 +1,29 @@
+# Quartus generated files and folders
+db/
+incremental_db/
+output_files/
+simulation/
+timing/
+*.rpt
+*.smsg
+*.summary
+*.done
+*.jdi
+*.pin
+*.qws
+*.sld
+*.bak
+*.cdf
+*.bsf
+*.dpf
+*.ammdb
+*.bpm
+*.cdb
+*.hdb
+*.logdb
+*.rdb
+*.tdb
+*.ddb
+
+# Keep the programming file if you want people to just flash and play
+# !output_files/*.sof

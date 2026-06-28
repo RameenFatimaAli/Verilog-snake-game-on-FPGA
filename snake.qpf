@@ -1,0 +1,6 @@
+QUARTUS_VERSION = "13.0"
+DATE = "2024"
+
+# Revisions
+
+PROJECT_REVISION = "snake"
